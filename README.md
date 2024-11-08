@@ -42,7 +42,7 @@ We use [Material for MkDocs](https://github.com/squidfunk/mkdocs-material)
 
 - Niklas Korsbo - <niklas@pumas.ai>
 - Mohamed Tarek - <mohamed@pumas.ai>
-- Jose Storopoli - <jose@pumas.ai>
+- Jose Storopoli
 
 ## License
 

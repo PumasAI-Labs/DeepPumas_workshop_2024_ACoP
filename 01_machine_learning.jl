@@ -3,6 +3,7 @@ using CairoMakie
 using Distributions
 using Random
 set_theme!(deep_light())
+set_mlp_backend(:simplechains)
 
 # 
 # TABLE OF CONTENTS
@@ -222,7 +223,7 @@ lines!(-1..1, true_function; color = :gray, label = "true");
 axislegend();
 fig
 
-loss_train_l, loss_valid_l = [], []
+loss_train_l, loss_valid_l = Float64[], Float64[]
 
 fitted_nn = fit(
     nn,
@@ -261,7 +262,7 @@ fig
 
 reg_nn = MLPDomain(1, (32, tanh), (32, tanh), (1, identity); bias = true, reg = L2(0.1))
 
-reg_loss_train_l, reg_loss_valid_l = [], []
+reg_loss_train_l, reg_loss_valid_l = Float64[], Float64[]
 
 fitted_reg_nn = fit(
     reg_nn,
